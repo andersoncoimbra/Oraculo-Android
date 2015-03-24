@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Oraculo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="txtnome">Digite seu primeiro nome</string>
+    <string name="txtsigno">Qual seu signo</string>
+</resources>
