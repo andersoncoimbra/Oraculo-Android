@@ -16,6 +16,8 @@ public class Escorpiao extends Signo {
         this.listadefrases.add("O riso é a menor distância entre duas pessoas.");
         this.listadefrases.add("Vencer é 90 por cento suor e 40 por cento técnica.");
         this.listadefrases.add("O amor está mais próximo do que você imagina.");
+        this.listadefrases.add("Nunca se fique triste por se apaixonar");
+
 
 
     }

@@ -1,6 +1,6 @@
 package coimbra.parasite.oraculo;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -10,7 +10,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 
-public class OraculoActivity extends ActionBarActivity {
+public class OraculoActivity extends Activity {
 
     EditText nome; //Declaração da variavel para receber os valores do EditText ednome no XML
     Spinner signos; ////Declaração da variavel para receber os valores do Spinner ednome no XML
@@ -65,6 +65,8 @@ public class OraculoActivity extends ActionBarActivity {
                 nomeUser = nome.getText().toString(); //Responsavel de pegar o texto digitado no EditText de id ednome no XML
                 idSigno = (int) signos.getSelectedItemId(); //responsavel de pega o valor do indece ddo signo selecionado
 
+
+
                 GeraSorte s1 = new GeraSorte(nomeUser, idSigno); //instancia de um objeto geraSorte responsavel pelo processo de gerar a frase de sorte
 
                 if(nomeUser.trim().length() > 1) { //verifica se o nome digita tem mais que um caracter
@@ -73,7 +75,7 @@ public class OraculoActivity extends ActionBarActivity {
 
                 } else { //Aviso se o nome nao for digitado de forma valida
                     hsorte.setText("Atenção");  //titulo do aviso
-                    txtfrase.setText("Digite um nome Valido!"); //texto do aviso
+                    txtfrase.setText("Digite um nome Valido!"+idSigno); //texto do aviso
                 }
 
 
