@@ -15,14 +15,13 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Seu Nome"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/ednome"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="37dp"
-        android:layout_marginLeft="0dp" />
+        android:layout_marginLeft="0dp"
+        android:selectAllOnFocus="true"
+        android:shadowColor="#6c001840" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,7 +32,31 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
+        android:id="@+id/spsignos"
         />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btgerarsorte"
+        android:id="@+id/btgerarsorte"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/hsorte"
+        android:layout_gravity="center_horizontal"
+        android:autoText="false"
+        android:textColor="#ff150fff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/txtfrase"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffff2720" />
 
 </LinearLayout>

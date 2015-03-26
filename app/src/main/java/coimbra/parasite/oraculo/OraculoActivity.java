@@ -15,9 +15,9 @@ public class OraculoActivity extends ActionBarActivity {
     EditText nome; //Declaração da variavel para receber os valores do EditText ednome no XML
     Spinner signos; ////Declaração da variavel para receber os valores do Spinner ednome no XML
 
-    private String[] listaSignos = new String[]{"Aries", "Touro",
+    private String[] listaSignos = new String[]{"Direto do Alem", "Aries", "Touro",
             "Gemeos","Cancer","Leao","Virgem", "Libra", "Escorpiao",
-            "Sagitario","Capricornio", "Aquario","Peixe","Direto do Alem"};
+            "Sagitario","Capricornio", "Aquario","Peixe"};
              //Array de string dos Signos do zodiaco para mostrar no Spinner(Select)
 
     Button btgerarsorte; //Declaração da variavel para receber os valores de classe do Button btgerarsorte no XML
@@ -68,8 +68,8 @@ public class OraculoActivity extends ActionBarActivity {
                 GeraSorte s1 = new GeraSorte(nomeUser, idSigno); //instancia de um objeto geraSorte responsavel pelo processo de gerar a frase de sorte
 
                 if(nomeUser.trim().length() > 1) { //verifica se o nome digita tem mais que um caracter
-                    hsorte.setText("Testando Titulo ok! posisão " + idSigno); //Altera com TextView hsorte para mostra o nome do usuario e texto "sua sorte é"
-                    txtfrase.setText("Testando frase de sorte ok! Signo " + nomeUser + nomeUser.length()); //receber a frase da classe gerarSorte e altera o TextView txtfrase com a frase gerada
+                    hsorte.setText(nomeUser.toUpperCase()+" sua Sorte é:"); //Altera com TextView hsorte para mostra o nome do usuario e texto "sua sorte é"
+                    txtfrase.setText(s1.getFrasegerada()); //receber a frase da classe gerarSorte e altera o TextView txtfrase com a frase gerada
 
                 } else { //Aviso se o nome nao for digitado de forma valida
                     hsorte.setText("Atenção");  //titulo do aviso
