@@ -6,14 +6,19 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.*;
+
 
 
 public class OraculoActivity extends Activity {
 
     EditText nome; //Declaração da variavel para receber os valores do EditText ednome no XML
     Spinner signos; ////Declaração da variavel para receber os valores do Spinner ednome no XML
+
 
     private String[] listaSignos = new String[]{"Direto do Alem", "Aries", "Touro",
             "Gemeos","Cancer","Leao","Virgem", "Libra", "Escorpiao",
@@ -29,13 +34,16 @@ public class OraculoActivity extends Activity {
     String nomeUser;//declaração de variavel para receber o nome do usuario
 
 
-
+    private AdView ads; //declaração do intem de banner do admob para publicidade;
+    LinearLayout layoutAds;// declaração do Layout que ira receber o banner do anuncio
+    String IdUnico = "ca-app-pub-9206111030138265/2822747432";//sera o id do bloco de anuncio do admob  id-do-bloco-de-anuncio-do-admob
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TelaSorte();  //Responsavel por carragar a tela sortes do Oraculo
+        adMob(); //Responsavel por carregar os Anuncios
 
     }
 
@@ -83,6 +91,47 @@ public class OraculoActivity extends Activity {
         });
 
 
+    }
+
+    public void adMob(){
+        //Cria a adView que na vedade o objeto Anuncio do Admob
+        ads = new AdView(this); //diz em qual contexto de activity sera emplementada
+        ads.setAdUnitId(IdUnico); //Recebe o id do bloco de anuncio
+        ads.setAdSize(AdSize.BANNER);//recebe o tipo e o tamanho do anuncio
+
+        layoutAds = (LinearLayout) findViewById(R.id.ads); //atribuio o valor de class  do elemento ads do tipo LinearLayout do xml a varialvel layoutAds
+
+        layoutAds.addView(ads); //adiciona o elemento ads do tipo AdView ao LinearLayout
+
+        AdRequest adRequest = new AdRequest.Builder()  //requisição de anuncio
+                //.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)    //usado para gera os anuncio de teste em ambiente de produção
+                .build();//constrouir o pedido  de anuncio
+
+        ads.loadAd(adRequest);//Carregar o anuncio
+
+
+
+
+    }
+
+
+
+    @Override
+    public void onPause() {
+        ads.pause();
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ads.resume();
+    }
+
+    @Override
+    public void onDestroy() {
+        ads.destroy();
+        super.onDestroy();
     }
 
 

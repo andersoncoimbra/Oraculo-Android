@@ -1,26 +1,14 @@
 package coimbra.parasite.oraculo;
 
-import coimbra.parasite.oraculo.signos.Aquario;
-import coimbra.parasite.oraculo.signos.Aries;
-import coimbra.parasite.oraculo.signos.Cancer;
-import coimbra.parasite.oraculo.signos.Capricornio;
-import coimbra.parasite.oraculo.signos.DiretoDoAlem;
-import coimbra.parasite.oraculo.signos.Escorpiao;
-import coimbra.parasite.oraculo.signos.Gemeos;
-import coimbra.parasite.oraculo.signos.Leao;
-import coimbra.parasite.oraculo.signos.Libra;
-import coimbra.parasite.oraculo.signos.Peixe;
-import coimbra.parasite.oraculo.signos.Sagitario;
-import coimbra.parasite.oraculo.signos.Signo;
-import coimbra.parasite.oraculo.signos.Touro;
-import coimbra.parasite.oraculo.signos.Virgem;
+import coimbra.parasite.oraculo.signos.*;
+
 
 /**
  * Criado por Anderson Coimbra em 24/03/2015.
  */
 
 public class GeraSorte {
-    private String frasegerada; //guadar as frase geradas pela objeto
+    private String frasegerada; //guadar as frase gerada pelo objeto do tipo signo
 
     public GeraSorte(String nome, int id){ //metodo contrutor do gerador de frases
         Signo s = null;  //Inicia a variavel do tipo signo num estado nulo

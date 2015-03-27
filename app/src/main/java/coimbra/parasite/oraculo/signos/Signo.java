@@ -1,6 +1,5 @@
 package coimbra.parasite.oraculo.signos;
 
-import android.text.TextUtils;
 
 import java.util.ArrayList;
 
@@ -21,7 +20,7 @@ public abstract class Signo {
         indice = new Random(); //Instanciamento do objeto do tipo Randomico
         this.nomeusuario = nome;  //recebe do parametro o nome do usuario porem naos sera usado
         afrasegerada = listadefrases.get(indice.nextInt(listadefrases.size())); //Algoritimo que pega a frase aleatoriamente da lista defrase
-        //usando tres metodos um para pega a a frase no Arralis um para gera um numero aleatotio o outro para determinar u limite de frases dentro da lista
+        //usando tres metodos um para pega a a frase no Arralist um para gera um numero aleatotio o outro para determinar u limite de frases dentro da lista
 
     }
 
