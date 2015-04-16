@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+
 import android.widget.LinearLayout;
+
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -99,12 +101,23 @@ public class OraculoActivity extends Activity {
         ads.setAdUnitId(IdUnico); //Recebe o id do bloco de anuncio
         ads.setAdSize(AdSize.BANNER);//recebe o tipo e o tamanho do anuncio
 
+       // ads = (AdView) this.findViewById(R.id.adView);
+
+
         layoutAds = (LinearLayout) findViewById(R.id.ads); //atribuio o valor de class  do elemento ads do tipo LinearLayout do xml a varialvel layoutAds
 
         layoutAds.addView(ads); //adiciona o elemento ads do tipo AdView ao LinearLayout
 
+      /*
+              <com.google.android.gms.ads.AdView android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adUnitId="MY_AD_UNIT_ID"
+        ads:adSize="BANNER"/>
+        */
+
         AdRequest adRequest = new AdRequest.Builder()  //requisição de anuncio
-                //.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)    //usado para gera os anuncio de teste em ambiente de produção
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)    //usado para gera os anuncio de teste em ambiente de produção
                 .build();//constrouir o pedido  de anuncio
 
         ads.loadAd(adRequest);//Carregar o anuncio
