@@ -1,6 +1,8 @@
 # Oraculo-Android
 Projeto sorte do dia para android
 
+<h1><a href="https://github.com/andersoncoimbra/Oraculo-Android/raw/master/app/app-release.apk">Download<a></h1>
+
 <h6>Versão para android do trabalho de conclusao do modo de programação 2 do curso de jogos digitais da Faculdade Ipiranga.
 Os eventos do app permitem com a entrada do nome e o signo uma visualização de uma frase que cosrresponde com uma sorte </h6>
 
