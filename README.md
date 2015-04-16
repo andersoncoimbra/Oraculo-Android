@@ -9,5 +9,5 @@ Os eventos do app permitem com a entrada do nome e o signo uma visualização de
 <img  float="left" alt="SplshScreem Aplicativo Oraculo" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/splash.png"></img>
 <img  float="left" alt="tela inicia Aplicativo Oraculo" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/tela%20inicial.PNG"></img>
 <img  float="left" alt="Sorte gerada teclado" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/tela%20inicial%20teckado.PNG"></img>
-<img  float="left"alt="Sorte gerada signos" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/tela%20inicial%20signos.PNG"></img>
+<img  float="left" alt="Sorte gerada signos" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/tela%20inicial%20signos.PNG"></img>
 <img  float="left" alt="Sorte gerada Aplicativo Oraculo" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/tela%20sorte%20gerada.PNG"></img>
