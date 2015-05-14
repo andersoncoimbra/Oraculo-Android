@@ -6,4 +6,12 @@
     <string name="txtnome">Digite seu primeiro nome</string>
     <string name="txtsigno">Qual seu signo</string>
     <string name="btgerarsorte">Gerar Sorte</string>
+    <string name="sobreoraculo">Sobre Oráculo</string>
+    <string name="txtsobre">O Oráculo e uma aplicativo de codigo aberto desenvolvido pela turma de Programação de Jogo Digitais da Faculdade Ipiranga <br></br></string>
+    <string name="criadores">Criadores</string>
+    <string name="anderson">Anderson Coimbra</string>
+    <string name="kim">Kim Peniche</string>
+    <string name="face"><a href="http://facebook.com/">Facebook</a></string>
+    <string name="twitter">Twitter</string>
+    <string name="git">GitHub</string>
 </resources>

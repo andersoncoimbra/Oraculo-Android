@@ -69,7 +69,15 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        ></LinearLayout>
+        android:layout_weight="0.56"></LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sobre Oráculo"
+        android:id="@+id/btsobre"
+        android:layout_gravity="center_horizontal"
+        android:focusable="true" />
 
 
 </LinearLayout>
