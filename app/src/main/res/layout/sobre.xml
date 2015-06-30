@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:gravity="center|top"
     android:weightSum="1"
-    android:id="@+id/listviewsobre">
+    android:id="@+id/listviewsobre"
+    android:background="@mipmap/splash">
 
     <TextView
         android:layout_width="wrap_content"
@@ -73,7 +74,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/face"
                             android:id="@+id/btface1"
-                            android:autoLink="all"/>
+                            android:autoLink="all"
+                            android:background="@color/background_material_light" />
 
                         <Button
                             style="?android:attr/buttonStyleSmall"

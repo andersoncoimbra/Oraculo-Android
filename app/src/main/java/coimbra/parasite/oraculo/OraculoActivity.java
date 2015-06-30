@@ -1,6 +1,8 @@
 package coimbra.parasite.oraculo;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -141,12 +143,39 @@ public void adMob(){
 
 public void telaSobre(){
     setContentView(R.layout.sobre);
+    Button btface1 = (Button) findViewById(R.id.btface1); //Declaração do Botão do facebbok de Anderson Coimbra
+
+
+
+//////////////////////////////
+//  Ações de click dos botãos
+//////////////////////////////
+
+    //Ação de click do botão do Facebook Anderson Coimbra
+    botaoURL(btface1, "http://facebook.com/andersoncoimbra/");
+
+
 
 }
 
+///////////////////////////////////////////////////////////////////////
+//  Metodo para relacionar elemento Botão com ação de abertura de url
+///////////////////////////////////////////////////////////////////////
+       public void botaoURL(Button bt, final String link) {
+        bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse(link);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+    }
 
 
-@Override
+
+
+    @Override
 public void onPause() {
     ads.pause();
     super.onPause();
