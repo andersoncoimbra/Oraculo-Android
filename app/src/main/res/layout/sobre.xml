@@ -5,7 +5,7 @@
     android:gravity="center|top"
     android:weightSum="1"
     android:id="@+id/listviewsobre"
-    android:background="@mipmap/splash">
+    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,7 +13,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/sobreoraculo"
         android:id="@+id/textView2"
-        android:textColor="#ffffffff" />
+        android:textColor="#ff000000" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
             android:text="@string/txtsobre"
-            android:textColor="#ffffffff" />
+            android:textColor="#ff000000" />
     </LinearLayout>
 
     <TextView
@@ -34,7 +34,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/criadores"
         android:id="@+id/textView4"
-        android:textColor="#ffffffff" />
+        android:textColor="#ff000000" />
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -69,7 +69,7 @@
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             android:id="@+id/textView5"
                             android:text="@string/anderson"
-                            android:textColor="#ffffffff" />
+                            android:textColor="#ff000000" />
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
@@ -78,7 +78,7 @@
                             android:text="@string/face"
                             android:id="@+id/btface1"
                             android:autoLink="all"
-                            android:textColor="#ffffffff" />
+                            android:textColor="#ff000000" />
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
@@ -87,7 +87,7 @@
                             android:text="@string/twitter"
                             android:id="@+id/bttwitter1"
                             android:layout_gravity="center_horizontal"
-                            android:textColor="#ffffffff" />
+                            android:textColor="#ff000000" />
 
                         <Button
                             android:layout_width="fill_parent"
@@ -95,7 +95,7 @@
                             android:text="@string/git"
                             android:id="@+id/btgit1"
                             android:layout_gravity="center_horizontal"
-                            android:textColor="#ffffffff" />
+                            android:textColor="#ff000000" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -123,7 +123,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:id="@+id/textView6"
                         android:text="@string/kim"
-                        android:textColor="#ffffffff" />
+                        android:textColor="#ff000000" />
 
                     <Button
                         style="?android:attr/buttonStyleSmall"
@@ -131,7 +131,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/face"
                         android:id="@+id/btface2"
-                        android:textColor="#ffffffff" />
+                        android:textColor="#ff000000" />
 
                 </LinearLayout>
 
@@ -159,7 +159,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="@string/renato"
                         android:id="@+id/textView7"
-                        android:textColor="#ffffffff" />
+                        android:textColor="#ff000000" />
 
                     <Button
                         style="?android:attr/buttonStyleSmall"
@@ -167,7 +167,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/face"
                         android:id="@+id/btface3"
-                        android:textColor="#ffffffff" />
+                        android:textColor="#ff000000" />
                 </LinearLayout>
             </LinearLayout>
 
