@@ -3,6 +3,7 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/bg"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -15,7 +16,8 @@
         android:text="@string/txtnome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView" />
+        android:id="@+id/textView"
+        android:textColor="#ffffffff" />
 
     <EditText
         android:layout_width="fill_parent"
@@ -26,19 +28,25 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="0dp"
         android:selectAllOnFocus="true"
-        android:shadowColor="#6c001840" />
+        android:shadowColor="#ffffffff"
+        android:textColor="#ff000000"
+        android:singleLine="true"
+        android:background="#92ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txtsigno"
-        android:textSize="12dp" />
+        android:textSize="12dp"
+        android:textColor="#ffffffff" />
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spsignos"
-        />
+        android:theme="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
+        android:touchscreenBlocksFocus="false"
+        android:background="#5bffffff" />
 
     <Button
         android:layout_width="fill_parent"
@@ -54,7 +62,8 @@
         android:id="@+id/hsorte"
         android:layout_gravity="center_horizontal"
         android:autoText="false"
-        android:textColor="#ff150fff" />
+        android:textColor="#ff150fff"
+        android:background="#63ffffff" />
 
     <TextView
         android:layout_width="wrap_content"

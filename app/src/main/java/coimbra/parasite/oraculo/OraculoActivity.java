@@ -143,13 +143,22 @@ public void adMob(){
 
 public void telaSobre(){
     setContentView(R.layout.sobre);
+    Button btvoltar = (Button) findViewById(R.id.btvoltar);
     Button btface1 = (Button) findViewById(R.id.btface1); //Declaração do Botão do facebbok de Anderson Coimbra
 
 
 
-//////////////////////////////
-//  Ações de click dos botãos
-//////////////////////////////
+////////////////////////////////
+////  Ações de click dos botãos
+////////////////////////////////
+
+    //Ação de click do botão Volta da tela Ssobre
+    btvoltar.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            TelaSorte();
+        }
+    });
 
     //Ação de click do botão do Facebook Anderson Coimbra
     botaoURL(btface1, "http://facebook.com/andersoncoimbra/");
@@ -161,7 +170,7 @@ public void telaSobre(){
 ///////////////////////////////////////////////////////////////////////
 //  Metodo para relacionar elemento Botão com ação de abertura de url
 ///////////////////////////////////////////////////////////////////////
-       public void botaoURL(Button bt, final String link) {
+public void botaoURL(Button bt, final String link) {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
