@@ -13,7 +13,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/sobreoraculo"
         android:id="@+id/textView2"
-        />
+        style="@style/Base.TextAppearance.AppCompat.Display1"
+        android:textColor="@color/abc_primary_text_material_dark" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -24,7 +25,8 @@
             android:layout_width="308dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
-            android:text="@string/txtsobre" />
+            android:text="@string/txtsobre"
+            android:textColor="@color/abc_secondary_text_material_dark" />
     </LinearLayout>
 
     <TextView
@@ -32,13 +34,16 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/criadores"
-        android:id="@+id/textView4" />
+        android:id="@+id/textView4"
+        android:phoneNumber="false"
+        android:textColor="@color/abc_secondary_text_material_dark" />
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
-        android:paddingTop="10dp">
+        android:paddingTop="10dp"
+        android:visibility="visible">
 
         <LinearLayout
             android:orientation="vertical"
@@ -66,7 +71,8 @@
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             android:id="@+id/textView5"
-                            android:text="@string/anderson" />
+                            android:text="@string/anderson"
+                            android:textColor="@color/abc_secondary_text_material_dark" />
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
@@ -83,14 +89,16 @@
                             android:layout_height="wrap_content"
                             android:text="@string/twitter"
                             android:id="@+id/bttwitter1"
-                            android:layout_gravity="center_horizontal" />
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/background_material_light" />
 
                         <Button
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/git"
                             android:id="@+id/btgit1"
-                            android:layout_gravity="center_horizontal" />
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/background_material_light" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -117,14 +125,16 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:id="@+id/textView6"
-                        android:text="@string/kim" />
+                        android:text="@string/kim"
+                        android:textColor="@color/abc_secondary_text_material_dark" />
 
                     <Button
                         style="?android:attr/buttonStyleSmall"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/face"
-                        android:id="@+id/btface2" />
+                        android:id="@+id/btface2"
+                        android:background="@color/background_material_light" />
 
                 </LinearLayout>
 
@@ -146,12 +156,21 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/renato"
+                        android:id="@+id/textView7"
+                        android:textColor="@color/abc_secondary_text_material_dark" />
+
                     <Button
                         style="?android:attr/buttonStyleSmall"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/face"
-                        android:id="@+id/btface3" />
+                        android:id="@+id/btface3"
+                        android:background="@color/background_material_light" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -176,6 +195,13 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button2"
+        android:layout_gravity="right" />
 
 
 </LinearLayout>
