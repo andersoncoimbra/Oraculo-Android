@@ -31,7 +31,7 @@
         android:shadowColor="#ffffffff"
         android:textColor="#ff000000"
         android:singleLine="true"
-        android:background="#92ffffff" />
+        android:background="#c7ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,14 +46,15 @@
         android:id="@+id/spsignos"
         android:theme="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
         android:touchscreenBlocksFocus="false"
-        android:background="#5bffffff" />
+        android:background="#baffffff" />
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/btgerarsorte"
         android:id="@+id/btgerarsorte"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:background="#baffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -62,8 +63,8 @@
         android:id="@+id/hsorte"
         android:layout_gravity="center_horizontal"
         android:autoText="false"
-        android:textColor="#ff150fff"
-        android:background="#63ffffff" />
+        android:textColor="#ff000000"
+        android:background="#94ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -71,14 +72,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/txtfrase"
         android:layout_gravity="center_horizontal"
-        android:textColor="#ffff2720" />
+        android:textColor="#ff000000"
+        android:textAlignment="center"
+        android:background="#a4ffffff" />
 
-    <LinearLayout
-        android:id="@+id/ads"
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.56"></LinearLayout>
+
 
     <Button
         android:layout_width="wrap_content"
@@ -87,6 +85,15 @@
         android:id="@+id/btsobre"
         android:layout_gravity="center_horizontal"
         android:focusable="true" />
+
+    <LinearLayout
+        android:id="@+id/ads"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.56">
+
+        </LinearLayout>
 
 
 </LinearLayout>

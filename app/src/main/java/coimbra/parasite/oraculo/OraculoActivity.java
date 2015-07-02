@@ -144,7 +144,15 @@ public void adMob(){
 public void telaSobre(){
     setContentView(R.layout.sobre);
     Button btvoltar = (Button) findViewById(R.id.btvoltar);
-    Button btface1 = (Button) findViewById(R.id.btface1); //Declaração do Botão do facebbok de Anderson Coimbra
+    Button btface1 = (Button) findViewById(R.id.btface1); //Declaração do Botão do Facebook de Anderson Coimbra
+    Button bttwitter1 = (Button) findViewById(R.id.bttwitter1);//Declaração do Botão do Twitter de Anderson Coimbra
+    Button btlinkedin1 = (Button) findViewById(R.id.btlinkdin1); //Declaração do Botão do LinkedIn de Anderson Coimbra
+    Button btgit1 = (Button) findViewById(R.id.btgit1); //Declaração do Botão do GitHub de Anderson Coimbra
+    Button btface2 =(Button) findViewById(R.id.btface2); //Declaração do Botão do Facebook de Kim
+    Button btface3 = (Button) findViewById(R.id.btface3); //Declaração do Botão do Facebook de Renato
+    Button btface4 = (Button) findViewById(R.id.btface4); //Declaração do Botão do Facebook de Jully
+
+
 
 
 
@@ -160,8 +168,14 @@ public void telaSobre(){
         }
     });
 
-    //Ação de click do botão do Facebook Anderson Coimbra
-    botaoURL(btface1, "http://facebook.com/andersoncoimbra/");
+    //Ação de click do botão da tela sobre
+    botaoURL(btface1, "https://www.facebook.com/andersonbarroscoimbra");
+    botaoURL(bttwitter1, "http://twitter.com/andersonmegax");
+    botaoURL(btlinkedin1, "https://br.linkedin.com/in/andersoncoimbra");
+    botaoURL(btgit1,"https://github.com/andersoncoimbra");
+    botaoURL(btface2, "https://www.facebook.com/kimfarias.peniche");
+    botaoURL(btface3, "https://www.facebook.com/renato.benicio.73");
+    botaoURL(btface4, "https://www.facebook.com/fanymodesto");
 
 
 
