@@ -7,7 +7,7 @@ Projeto sorte do dia para android
 Os eventos do app permitem com a entrada do nome e o signo uma visualização de uma frase que cosrresponde com uma sorte </h6>
 
 <img  float="left" alt="SplshScreem Aplicativo Oraculo" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/splash.png"></img>
-<img  float="left" alt="tela inicia Aplicativo Oraculo" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/telainicial.PNG"></img>
-<img  float="left" alt="Sorte gerada teclado" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/telainicialteckado.PNG"></img>
-<img  float="left" alt="Sorte gerada signos" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/telainicialsignos.PNG"></img>
-<img  float="left" alt="Sorte gerada Aplicativo Oraculo" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/telasortegerada.PNG"></img>
+<img  float="left" alt="tela inicia Aplicativo Oraculo" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/telainicial.png"></img>
+<img  float="left" alt="Sorte gerada teclado" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/telainicialteckado.png"></img>
+<img  float="left" alt="Sorte gerada signos" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/telainicialsignos.png"></img>
+<img  float="left" alt="Sorte gerada Aplicativo Oraculo" src="https://raw.githubusercontent.com/andersoncoimbra/Oraculo-Android/master/app/src/main/res/mipmap-hdpi/telasortegerada.png"></img>
