@@ -15,7 +15,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.*;
-
+import com.parse.Parse;
+import com.parse.ParseInstallation;
 
 
 public class OraculoActivity extends Activity {
@@ -46,10 +47,12 @@ Button btsobre;
 
 @Override
 protected void onCreate(Bundle savedInstanceState) {
+
     super.onCreate(savedInstanceState);
     TelaSorte();  //Responsavel por carragar a tela sortes do Oraculo
     adMob(); //Responsavel por carregar os Anuncios
-
+    Parse.initialize(this, "sLdj4TybVbuueYa9tDdls8XcxN9hDvkFRWv5SE54", "lKSU5SECxAjBAWCqAB3fjCHSC6pR5nfJ39Ux10F9");
+    ParseInstallation.getCurrentInstallation().saveInBackground();
 }
 
 public void TelaSorte() {  //metodo criado para carregar a tela sorte
@@ -143,7 +146,7 @@ public void adMob(){
 
 public void telaSobre(){
     setContentView(R.layout.sobre);
-    Button btvoltar = (Button) findViewById(R.id.btvoltar);
+    Button btvoltar = (Button) findViewById(R.id.btvoltar);//Declaração do Botão de Voltar
     Button btface1 = (Button) findViewById(R.id.btface1); //Declaração do Botão do Facebook de Anderson Coimbra
     Button bttwitter1 = (Button) findViewById(R.id.bttwitter1);//Declaração do Botão do Twitter de Anderson Coimbra
     Button btlinkedin1 = (Button) findViewById(R.id.btlinkdin1); //Declaração do Botão do LinkedIn de Anderson Coimbra
@@ -157,10 +160,10 @@ public void telaSobre(){
 
 
 ////////////////////////////////
-////  Ações de click dos botãos
+////  Ações de click dos botãos Sobre.xml
 ////////////////////////////////
 
-    //Ação de click do botão Volta da tela Ssobre
+    //Ação de click do botão Volta da tela Sobre
     btvoltar.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {

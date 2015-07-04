@@ -54,7 +54,8 @@
         android:text="@string/btgerarsorte"
         android:id="@+id/btgerarsorte"
         android:layout_gravity="center_horizontal"
-        android:background="#baffffff" />
+        android:background="#baffffff"
+        android:layout_marginTop="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -84,7 +85,8 @@
         android:text="Sobre Oráculo"
         android:id="@+id/btsobre"
         android:layout_gravity="center_horizontal"
-        android:focusable="true" />
+        android:focusable="true"
+        android:layout_marginTop="65dp" />
 
     <LinearLayout
         android:id="@+id/ads"
