@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -16,7 +17,10 @@ import android.widget.TextView;
 
 import com.google.android.gms.ads.*;
 import com.parse.Parse;
+import com.parse.ParseException;
 import com.parse.ParseInstallation;
+import com.parse.ParsePush;
+import com.parse.SaveCallback;
 
 
 public class OraculoActivity extends Activity {
@@ -53,6 +57,18 @@ protected void onCreate(Bundle savedInstanceState) {
     adMob(); //Responsavel por carregar os Anuncios
     Parse.initialize(this, "sLdj4TybVbuueYa9tDdls8XcxN9hDvkFRWv5SE54", "lKSU5SECxAjBAWCqAB3fjCHSC6pR5nfJ39Ux10F9");
     ParseInstallation.getCurrentInstallation().saveInBackground();
+
+    ParsePush.subscribeInBackground("", new SaveCallback() {
+        @Override
+        public void done(ParseException e) {
+            if (e == null) {
+                Log.d("com.parse.push", "successfully subscribed to the broadcast channel.");
+            } else {
+                Log.e("com.parse.push", "failed to subscribe for push", e);
+            }
+        }
+    });
+
 }
 
 public void TelaSorte() {  //metodo criado para carregar a tela sorte
