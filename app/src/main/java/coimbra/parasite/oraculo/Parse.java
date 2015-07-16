@@ -3,6 +3,8 @@ package coimbra.parasite.oraculo;
 import android.app.Application;
 import android.util.Log;
 
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.Tracker;
 import com.parse.ParseException;
 import com.parse.ParseInstallation;
 import com.parse.ParsePush;
@@ -12,6 +14,9 @@ import com.parse.SaveCallback;
  * Created by Para Site on 07/07/2015.
  */
 public class Parse extends Application {
+
+    public static GoogleAnalytics analytics; // Objetos do tipo
+    public static Tracker tracker;           // Analytics
 
     @Override
     public void onCreate() {
@@ -30,6 +35,17 @@ public class Parse extends Application {
                 }
             }
         });
+
+
+// Codigo para Gogle analytics
+        analytics = GoogleAnalytics.getInstance(this);
+        analytics.setLocalDispatchPeriod(1800);
+
+        tracker = analytics.newTracker("UA-45956575-3"); // Local onde é colocado o id de acompanhamento Analytics
+        tracker.enableExceptionReporting(true);
+        tracker.enableAdvertisingIdCollection(true);
+        tracker.enableAutoActivityTracking(true);
+
 
     }
 

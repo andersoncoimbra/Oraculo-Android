@@ -15,7 +15,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.*;
-
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 
 public class OraculoActivity extends Activity {
@@ -43,6 +45,9 @@ LinearLayout layoutAds;// declaração do Layout que ira receber o banner do anu
 String IdUnico = "ca-app-pub-9206111030138265/2822747432";//sera o id do bloco de anuncio do admob  id-do-bloco-de-anuncio-do-admob
 
 Button btsobre;
+
+    GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
+    Tracker tracker = analytics.newTracker("UA-45956575-3"); // Responsavel por enviar os Hit para o Google Analytics
 
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -84,16 +89,15 @@ public void TelaSorte() {  //metodo criado para carregar a tela sorte
             idSigno = (int) signos.getSelectedItemId(); //responsavel de pega o valor do indece ddo signo selecionado
 
 
-
             GeraSorte s1 = new GeraSorte(nomeUser, idSigno); //instancia de um objeto geraSorte responsavel pelo processo de gerar a frase de sorte
 
-            if(nomeUser.trim().length() > 1) { //verifica se o nome digita tem mais que um caracter
-                hsorte.setText(nomeUser.toUpperCase()+" sua Sorte é:"); //Altera com TextView hsorte para mostra o nome do usuario e texto "sua sorte é"
+            if (nomeUser.trim().length() > 1) { //verifica se o nome digita tem mais que um caracter
+                hsorte.setText(nomeUser.toUpperCase() + " sua Sorte é:"); //Altera com TextView hsorte para mostra o nome do usuario e texto "sua sorte é"
                 txtfrase.setText(s1.getFrasegerada()); //receber a frase da classe gerarSorte e altera o TextView txtfrase com a frase gerada
 
             } else { //Aviso se o nome nao for digitado de forma valida
                 hsorte.setText("Atenção");  //titulo do aviso
-                txtfrase.setText("Digite um nome Valido!"+idSigno); //texto do aviso
+                txtfrase.setText("Digite um nome Valido!" + idSigno); //texto do aviso
             }
 
 
@@ -106,6 +110,7 @@ public void TelaSorte() {  //metodo criado para carregar a tela sorte
             telaSobre();
         }
     });
+
 
 
 }
@@ -138,6 +143,17 @@ public void adMob(){
     ads.loadAd(adRequest);//Carregar o anuncio
 
 
+    //  Hesponsavel por enviar os eventos da tela Principal sobre
+
+    tracker.setScreenName("Tela PSobre");
+
+    tracker.send(new HitBuilders.EventBuilder()
+
+            .setCategory("Tala Ativa ")
+            .setAction("click")
+            .setLabel("Navegação")
+            .build());
+
 
 
 }
@@ -156,6 +172,17 @@ public void telaSobre(){
 
 
 
+    /////////////////////////////////////
+    //  Responsavel por enviar os eventos da tela Principal sobre
+    ////////////////////////////////
+
+    tracker.setScreenName("Tela Principal");
+
+    tracker.send(new HitBuilders.EventBuilder()
+            .setCategory("TELA")
+            .setAction("Tela Ativa")
+            .setLabel("Navegação")
+            .build());
 
 
 ////////////////////////////////
@@ -171,6 +198,7 @@ public void telaSobre(){
     });
 
     //Ação de click do botão da tela sobre
+    //Metodo usado para simpifica a abertura de web-link
     botaoURL(btface1, "https://www.facebook.com/andersonbarroscoimbra");
     botaoURL(bttwitter1, "http://twitter.com/andersonmegax");
     botaoURL(btlinkedin1, "https://br.linkedin.com/in/andersoncoimbra");
@@ -185,6 +213,7 @@ public void telaSobre(){
 
 ///////////////////////////////////////////////////////////////////////
 //  Metodo para relacionar elemento Botão com ação de abertura de url
+//  Metodo para economizar linha de codigos
 ///////////////////////////////////////////////////////////////////////
 public void botaoURL(Button bt, final String link) {
         bt.setOnClickListener(new View.OnClickListener() {
