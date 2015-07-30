@@ -41,7 +41,7 @@ public class Parse extends Application {
         analytics = GoogleAnalytics.getInstance(this);
         analytics.setLocalDispatchPeriod(1800);
 
-        tracker = analytics.newTracker("UA-45956575-3"); // Local onde é colocado o id de acompanhamento Analytics
+        tracker = analytics.newTracker("UA-45956575-3"); // Local onde  colocado o id de acompanhamento Analytics
         tracker.enableExceptionReporting(true);
         tracker.enableAdvertisingIdCollection(true);
         tracker.enableAutoActivityTracking(true);
